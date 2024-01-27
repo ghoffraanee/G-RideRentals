@@ -1,6 +1,15 @@
+"use client";
 import React from 'react'
 
 export default function Contracts() {
+  const [mounted, setMounted] = React.useState(false)
+
+  React.useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  if (!mounted) return null
+  
   return (
     <div className="hero min-h-screen bg-base-200">
         <div className='p-6 bg-white mt-7 border card shrink-0 w-full max-w-2xl shadow-2xl '>

@@ -1,0 +1,43 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model car {
+  id          Int    @id @default(autoincrement())
+  name        String @db.VarChar(100)
+  price       String @db.VarChar(100)
+  status      String @db.VarChar(100)
+  year        String @db.VarChar(100)
+  color       String @db.VarChar(100)
+  description String @db.VarChar(100)
+}
+
+model user {
+  id       Int    @id @default(autoincrement())
+  name     String @db.VarChar(100)
+  email    String @db.VarChar(100)
+  password String @db.VarChar(100)
+  phone    String @db.VarChar(100)
+  sexe     String @db.VarChar(100)
+  adress   String @db.VarChar(100)
+}
+
+model contract {
+  id          Int    @id @default(autoincrement())
+  carId       String    @db.VarChar(100)
+  userId      String     @db.VarChar(100)
+  startDate   String @db.VarChar(100)
+  endDate     String @db.VarChar(100)
+  returnAdress String @db.VarChar(100)
+  status      String @db.VarChar(100)
+  phone       String @db.VarChar(100)
+  price       String @db.VarChar(100)
+  email       String @db.VarChar(100)
+  postalCode  String @db.VarChar(100)
+  deliveryAdresse    String @db.VarChar(100)
+}
