@@ -1,2 +1,2 @@
 # G-RideRentals
-car rental app using react.js
+car rental app using next.js
